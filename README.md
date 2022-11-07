@@ -7,3 +7,7 @@ I have created my own api from Mock Api. I have provided my Mock Api Link as bel
 ## What is Payload in Network ?
 
 Payload is nothing but is occurs when we perform the `post method` of api.
+
+## Bugs :
+
+I have bugs on page refresement. When I add new data and then I add again new data at that time it will call Edit button instead of calling Add Button.
