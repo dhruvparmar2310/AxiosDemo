@@ -23,9 +23,9 @@ function AxiosDemo () {
     if (brand === '' || models === '') {
       alert('Please provide some data in the empty fields...')
     } else {
-      setBrand('')
-      setModels('')
       if (!isEdit) {
+        setBrand('')
+        setModels('')
         setIsEdit(true)
         Axios.post('https://6364ac837b209ece0f4b06db.mockapi.io/cars', {
           brand,
@@ -45,6 +45,8 @@ function AxiosDemo () {
       }
 
       if (isEdit) {
+        setBrand('')
+        setModels('')
         const getId = localStorage.getItem('id')
         console.log('getId :>> ', getId)
         Axios.put(`https://6364ac837b209ece0f4b06db.mockapi.io/cars/${getId}`, {
