@@ -7,7 +7,7 @@ function App () {
   return (
     <>
       <div className='container'>
-        <h2 className='App'>Axios Demo</h2><hr/>
+        <h2 className='App'>Car Details</h2><hr/>
         <AxiosDemo />
       </div>
     </>
