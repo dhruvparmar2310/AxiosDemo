@@ -26,7 +26,6 @@ function AxiosDemo () {
       if (!isEdit) {
         setBrand('')
         setModels('')
-        setIsEdit(true)
         Axios.post('https://6364ac837b209ece0f4b06db.mockapi.io/cars', {
           brand,
           models
@@ -72,20 +71,20 @@ function AxiosDemo () {
   const handleEditButton = (e, id) => {
     // console.log('id', id)
     // console.log('index :>> ', index)
-    if (isEdit) {
-      localStorage.setItem('id', id)
+    setIsEdit(true)
 
-      data.filter((e) => {
-        if (id === e.id) {
-          console.log('id :>> ', id)
-          console.log('e.id', e.id, 'e', e)
-          setBrand(e.brand)
-          setModels(e.models)
-        }
-        return e
+    localStorage.setItem('id', id)
+
+    data.filter((e) => {
+      if (id === e.id) {
+        console.log('id :>> ', id)
+        console.log('e.id', e.id, 'e', e)
+        setBrand(e.brand)
+        setModels(e.models)
       }
-      )
+      return e
     }
+    )
   }
 
   const handleDeleteButton = (e, id) => {
